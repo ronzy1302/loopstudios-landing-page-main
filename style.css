@@ -150,8 +150,6 @@ main {
   padding: 8px 3em;
   cursor: pointer;
   color: black;
-  border: none;
-  border-bottom: 2px solid black;
   transition: color, box-shadow, 0.3s ease-in-out;
 }
 
