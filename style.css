@@ -1,0 +1,480 @@
+/* font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/desktop/image-hero.jpg") no-repeat top;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  opacity: 0.8;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+nav .burger-open,
+.burger-close {
+  display: none;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.tag-line {
+  border: 2px solid white;
+  width: 47%;
+  font-size: 3.5rem;
+  padding: 20px 1em 20px 20px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin: 2.8em 2.3em;
+  line-height: 1.5em;
+}
+
+main {
+  width: 80%;
+  display: block;
+  margin: 8rem auto;
+}
+
+.about {
+  display: flex;
+  position: relative;
+}
+
+.about .left {
+  width: 60%;
+}
+
+.about .left img {
+  width: 100%;
+  height: auto;
+}
+
+.about .right {
+  width: 50%;
+  padding: 4em 0em 0 5em;
+  padding-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  background-color: white;
+}
+
+.right h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 580;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about .right p {
+  color: hsl(0, 0%, 55%);
+  line-height: 1.7;
+  font-family: "Alata", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  word-spacing: 4px;
+}
+
+.creations {
+  margin-top: 10rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+
+.heading h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 580;
+  text-transform: uppercase;
+}
+
+.heading a {
+  text-decoration: none;
+  font-family: "Alata", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid hsl(0, 0%, 45%);
+  padding: 8px 3em;
+  cursor: pointer;
+  color: black;
+  border: none;
+  border-bottom: 2px solid black;
+  transition: color, box-shadow, 0.3s ease-in-out;
+}
+
+.heading a:hover {
+  color: white;
+  box-shadow: inset 0 -2.5em black;
+}
+
+.creations .btn {
+  display: none;
+  cursor: pointer;
+}
+.creations .grid-mobile {
+  display: none;
+}
+.creations .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+.grid img:hover {
+  opacity: 0.8;
+}
+
+.grid .images {
+  position: relative;
+}
+
+.grid .img-tag {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  color: white;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 20px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  text-shadow: 1px 1px black;
+  z-index: 2;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 30px 50px;
+  line-height: 3;
+}
+
+.left-footer img {
+  width: 40%;
+}
+
+.left-footer ul {
+  display: flex;
+}
+
+.left-footer li {
+  list-style: none;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.left-footer a {
+  color: white;
+}
+
+.right-footer {
+  text-align: right;
+  color: hsl(0, 0%, 41%);
+  font-family: "Alata", sans-serif;
+}
+
+.right-footer img {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .tag-line {
+    margin: 3.5em 2em;
+    width: 49%;
+    font-size: 3rem;
+  }
+  .about .left img {
+    width: 480px;
+    height: auto;
+  }
+  .about .right {
+    padding: 3em 0 0 3em;
+  }
+  .about .right p {
+    line-height: 1.5;
+  }
+  .creations {
+    margin-top: 8rem;
+  }
+  .grid img {
+    height: 320px;
+  }
+  .grid .img-tag {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    height: 550px;
+  }
+  .nav-links {
+    width: 50%;
+  }
+  .tag-line {
+    margin: 3em 1.9em;
+    width: 50%;
+    font-size: 2.5rem;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .left,
+  .about .right {
+    width: 100%;
+  }
+  .about .left img {
+    width: 100%;
+  }
+  .about .right {
+    position: relative;
+    text-align: center;
+  }
+  .creations .grid {
+    display: none;
+  }
+
+  .creations .grid-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .grid-mobile img {
+    width: 100%;
+  }
+
+  .grid-mobile .images {
+    position: relative;
+  }
+
+  .grid-mobile .img-tag {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    padding: 1em;
+    font-weight: 400;
+    display: block;
+    width: 50%;
+    text-shadow: 1px 1px black;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    height: 100vh;
+  }
+  .tag-line {
+    width: 60%;
+    margin: 3em 2.5em;
+    font-size: 2.5rem;
+  }
+  nav .burger-open {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in;
+    padding-top: 3em;
+  }
+  .nav-links li {
+    opacity: 0;
+    font-size: 1.5em;
+    margin-left: 2.8em;
+    text-align: center;
+  }
+  .nav-links a:hover::before {
+    transform: scaleX(0);
+  }
+  .nav-links img {
+    display: block;
+    width: 35px;
+  }
+  .about .left img {
+    width: 100%;
+  }
+  .heading h2 {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .heading a {
+    display: none;
+  }
+  .creations .btn {
+    display: block;
+    text-decoration: none;
+    font-family: "Alata", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 1px solid hsl(0, 0%, 45%);
+    padding: 8px 2em;
+    width: 30%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .creations .grid-mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-mobile .img-tag {
+    width: 33%;
+  }
+  .about .right p {
+    line-height: 2;
+  }
+  .creations {
+    margin-top: 5rem;
+  }
+  .heading {
+    margin-bottom: 3em;
+  }
+  footer,
+  .left-footer ul {
+    flex-direction: column;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .left-footer li {
+    margin-right: 0px;
+  }
+  .right-footer img {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  .right-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.nav-active {
+  transform: translateY(0%);
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tag-line {
+    width: 80%;
+    margin: 3em auto;
+  }
+  .about .right h1 {
+    font-size: 35px;
+  }
+  .heading h2 {
+    font-size: 30px;
+  }
+  .creations .btn {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .tag-line {
+    font-size: 35px;
+  }
+  .about .right {
+    padding: 3em 0 0 1em;
+    right: 10px;
+  }
+  .about .right h1 {
+    font-size: 30px;
+  }
+}
